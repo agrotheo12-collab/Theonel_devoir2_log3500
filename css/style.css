@@ -1,0 +1,211 @@
+/* ===== Base ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6fa;
+  color: #1f2937;
+}
+
+/* ===== Barre de navigation ===== */
+.navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+  color: #1f2937;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-links a.active {
+  color: #2563eb;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f4f6fa;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 8px 14px;
+}
+
+.search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  font-family: inherit;
+  width: 200px;
+}
+
+/* ===== Contenu principal ===== */
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px 24px 60px;
+}
+
+.back-link {
+  display: inline-block;
+  color: #2563eb;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* ===== Carte du pays ===== */
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  padding: 32px;
+  display: flex;
+  gap: 36px;
+}
+
+.flag-wrap img {
+  width: 260px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+.info h1 {
+  margin: 0 0 18px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f1f4;
+}
+
+.info-row:last-child {
+  border-bottom: none;
+}
+
+.icon-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #e8f0fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 14px;
+}
+
+.info-row .label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #374151;
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.info-row .value {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+/* ===== États : vide / chargement / erreur ===== */
+.state-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 60px 30px;
+  text-align: center;
+  color: #6b7280;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.state-box p {
+  margin: 12px 0 0;
+  font-size: 14px;
+}
+
+.spinner {
+  width: 34px;
+  height: 34px;
+  border: 3px solid #dbeafe;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.error-box {
+  color: #b91c1c;
+}
+
+/* ===== Plusieurs résultats trouvés ===== */
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.choice-btn {
+  background: #eef2ff;
+  color: #2563eb;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.choice-btn:hover {
+  background: #dbeafe;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 600px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+  .nav-links {
+    display: none;
+  }
+}
